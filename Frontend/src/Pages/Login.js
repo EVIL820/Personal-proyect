@@ -1,11 +1,10 @@
 // Login.js
 import React from 'react';
-import backgroundImage from '../bg.jpg';
 
 function Login() {
   return (
     <div>
-      <section className="background-container" style={{backgroundImage: `url(${backgroundImage})`}}>
+      <section>
         <div className="login-box">
           <form action="">
             <h2>Login</h2>
