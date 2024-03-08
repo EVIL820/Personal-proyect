@@ -1,37 +1,37 @@
-// Login.js
-import React from 'react';
+import React from "react";
 
 function Login() {
   return (
     <div>
-      <section>
+      <section className="background-container">
         <div className="login-box">
           <form action="">
-            <h2>Login</h2>
+            <h2>Iniciar Sesión</h2>
             <div className="input-box">
               <span className="icon">
                 <ion-icon name="mail"></ion-icon>
               </span>
               <input type="email" required />
-              <label>Email</label>
+              <label>Correo Electrónico</label>
             </div>
             <div className="input-box">
               <span className="icon">
                 <ion-icon name="lock-closed"></ion-icon>
               </span>
               <input type="password" required />
-              <label>Password</label>
+              <label>Contraseña</label>
             </div>
             <div className="remember-forgot">
               <label>
-                <input type="checkbox" />Remember me
+                <input type="checkbox" />
+                Recordarme
               </label>
-              <a href="#">Forgot Password?</a>
+              <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">Iniciar Sesión</button>
             <div className="register-link">
               <p>
-                Don't have an account? <a href="#">Register</a>
+                ¿No tienes una cuenta? <a href="/register">Registrate</a>
               </p>
             </div>
           </form>
