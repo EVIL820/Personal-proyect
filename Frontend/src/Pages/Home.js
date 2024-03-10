@@ -239,16 +239,6 @@ function Home() {
             </div>
           </div>
         </div>
-
-        <div class="card">
-          <div class="boxshadow"></div>
-          <div class="main">
-            <div class="top"></div>
-            <div class="left side"></div>
-            <div class="right side"></div>
-            <div class="title">TITLE</div>
-          </div>
-        </div>
       </section>
     </div>
   );
