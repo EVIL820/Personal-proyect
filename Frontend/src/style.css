@@ -23,6 +23,7 @@ section {
   background: url(bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
+  filter: hue-rotate(0deg);
   animation: animateBg 7.5s linear infinite;
 }
 
@@ -48,6 +49,19 @@ section {
 .register-box {
   position: relative;
   width: 400px;
+  height: 550px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.forgot-password-box {
+  position: relative;
+  width: 400px;
   height: 450px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -56,6 +70,15 @@ section {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
+}
+
+.back-link {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 h2 {
@@ -67,7 +90,7 @@ h2 {
 .input-box {
   position: relative;
   width: 310px;
-  margin: 30px 0;
+  margin: 30px auto;
   border-bottom: 2px solid #fff;
 }
 
@@ -145,6 +168,19 @@ button:hover {
   background: crimson;
 }
 
+.password-toggle {
+  position: absolute;
+  right: 32px; /* Ajusta la posición a tu gusto */
+  top: 60%;
+  transform: translateY(-50%);
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2em; /* Tamaño del botón ajustado */
+  padding: 0; /* Eliminamos el padding para reducir el espacio ocupado */
+  width: auto; /* Permitir que el botón se ajuste al tamaño del icono */
+}
+
 .register-link {
   font-size: 0.9em;
   color: #fff;
@@ -159,6 +195,24 @@ button:hover {
 }
 
 .register-link p a:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+
+.login-link {
+  font-size: 0.9em;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.login-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link p a:hover {
   text-decoration: underline;
   color: crimson;
 }
@@ -324,34 +378,35 @@ button:hover {
     .main {
       transform: scale(1.1);
       .top {
-        top: -50px;
+        top: -30px;
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       }
       .left {
-        left: -50px;
-        transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+        left: -30px;
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       }
       .right {
-        right: -50px;
-        transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+        right: -30px;
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       }
       .title {
         opacity: 1;
-        transition: all 0.2s ease-out 1.3s;
+        transition: opacity 0.2s ease-out 0.3s;
       }
 
       .button-container {
         .button {
           &:nth-child(1) {
-            bottom: 80px;
-            transition-delay: 0.8s;
+            bottom: 70px;
+            transition-delay: 0.6s;
           }
           &:nth-child(2) {
             bottom: 40px;
-            transition-delay: 0.6s;
+            transition-delay: 0.4s;
           }
           &:nth-child(3) {
-            bottom: 0;
-            transition-delay: 0.4s;
+            bottom: 10px;
+            transition-delay: 0.2s;
           }
         }
       }

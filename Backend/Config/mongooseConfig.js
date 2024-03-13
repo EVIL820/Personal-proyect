@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
-// URL de conexión a tu base de datos MongoDB
-const DB_URI = "mongodb://localhost:27017/";
-
-// Conectar a la base de datos
+// URL de conexión a tu base de datos MongoDB y nombre de la base de datos
 mongoose
-  .connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect("mongodb://localhost:27017/Personal-Proyect")
   .then(() => {
     console.log("Conexión exitosa a la base de datos.");
   })
