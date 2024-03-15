@@ -1,10 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+const cors = require("cors"); // Importa el middleware cors
 const authController = require("./Controllers/AuthController");
 const mongooseConnection = require("../Config/mongooseConfig");
 
 const app = express();
+app.use(cors()); // Usa el middleware cors
 
 // Middleware para parsear JSON en las solicitudes
 app.use(bodyParser.json());

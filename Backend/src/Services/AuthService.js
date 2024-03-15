@@ -7,9 +7,9 @@ const jwtkey = "SoyMuyBuenoProgramandoEnLaMadugada";
 const AuthService = {
   register: async (req, res) => {
     try {
-      const { username, email, password } = req.body;
+      const { username, email, password, confirmPassword } = req.body;
 
-      // Verificar si el usuario ya existe
+      // Verificar si el usuario o el correo ya están en uso
       const existingUser = await User.findOne({
         $or: [{ username }, { email }],
       });
@@ -17,6 +17,13 @@ const AuthService = {
         return res.status(400).json({
           message: "El nombre de usuario o correo electrónico ya está en uso.",
         });
+      }
+
+      // Verificar si las contraseñas coinciden
+      if (password !== confirmPassword) {
+        return res
+          .status(400)
+          .json({ message: "Las contraseñas no coinciden" });
       }
 
       // Encriptar la contraseña
